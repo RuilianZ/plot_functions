@@ -15,6 +15,7 @@ ggplot(data.frame(x = c(0, 1)), aes(x = x)) +
   stat_function(fun = function(x){x-x^2}, color = 'blue') + 
   annotate(geom = 'text', label = '-p^2logp', x = 0.3, y = 0.05) +
   annotate(geom = 'text', label = 'p-p^2', x = 0.15, y = 0.2) +
+  labs(x = 'p', y = '') +
   theme_bw()
 ```
 
