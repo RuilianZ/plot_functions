@@ -1,0 +1,20 @@
+---
+title: "Plot Functions"
+author: "Roxy Zhang"
+date: "2/22/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+```
+
+```{r}
+ggplot(data.frame(x = c(0, 1)), aes(x = x)) +
+  stat_function(fun = function(x){-x^2*log(x)}, color = 'green') +
+  stat_function(fun = function(x){x-x^2}, color = 'blue') + 
+  annotate(geom = 'text', label = '-p^2logp', x = 0.3, y = 0.05) +
+  annotate(geom = 'text', label = 'p-p^2', x = 0.15, y = 0.2) +
+  theme_bw()
+```
+
